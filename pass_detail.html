@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Bus Pass Management System</title>
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+ 
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+  
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 30px;
+  width: 400px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: fit-content;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+select{
+    width: fit-content;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+
+}
+
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: fit-content;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+  
+}
+
+.btn1:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Create Bus Pass</h2>
+
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark  fixed-top">
+    <a  class="navbar-brand" href="#">Pass Details</a>
+    <ul class="nav justify-content-center fixed-top">
+      <li class="nav-item" >
+        <a class="nav-link" href="home.html">Home</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" href="my_details.html">My Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="pass_detail.html">Pass Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="create.html" target="">Create Bus Pass</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Renew Bus Pass</a>
+      </li>
+      <li ><button type="button" class="btn btn-primary"> <a href="index.html" target="_self;" style="color:white;" >Sign Out</a> </button></li>
+    </ul>
+  </nav>
+
+
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form >
+      
+        <div class="row">
+          <div class="col-50">
+
+            <label for="pass id">Pass Id</label>
+            <input type="text" name="pass id" id="pass id">
+            
+            <label for="fname"><i class="fa fa-user"></i> First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Inkal" >
+            
+            <label for="lname"><i class="fa fa-user"></i> Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Panchal" >
+            
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="inkal@example.com"  >
+            
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" >
+            
+            
+            <label for="Start"><i class="fa fa-institution"></i> Start stop</label>
+            
+            <select class="form-select" aria-label="Default select example" >
+                <option selected >Select starting stop</option>
+                <option value="1" >Vasad</option>
+                <option value="2">Anand</option>
+                <option value="3">Baroda</option>
+                <option value="4">Nadiad</option>
+              </select>
+
+              <label for="Start"><i class="fa fa-institution"></i> End stop</label>
+            <select type="text"class="form-select" aria-label="Default select example">
+                <option selected>Select ending stop</option>
+                <option value="1">Vasad</option>
+                <option value="2">Anand</option>
+                <option value="3">Baroda</option>
+                <option value="4">Nadiad</option>
+              </select>
+
+              <label for="pass id"> Pass type</label>
+            <select class="form-select" aria-label="Default select example" >
+              <option selected >Select pass type</option>
+              <option value="1" >Quartly</option>
+              <option value="2">Monthly</option>
+              <option value="3">Annually</option>
+              
+            </select>
+              
+              </div>
+              </div>
+            
+
+          
+          </div>
+          
+        </div>
+         
+       
+      </form>
+    </div>
+  
+</body>
+</html>

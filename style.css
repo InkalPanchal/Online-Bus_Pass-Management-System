@@ -1,0 +1,13 @@
+a.nav-link{color: white;}
+    a:hover{color: teal;}
+    .navbar-default.navbar-brand  {color: darkgoldenrod;}
+
+body{
+background-image: url("bus_stop.jpg");
+background-repeat: no-repeat;
+height: 100%;
+width: 100%;
+background-size: cover;
+background-attachment: fixed;
+
+}
